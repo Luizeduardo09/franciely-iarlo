@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franciely & Iarlo - Nosso Casamento</title>
+    <meta
+      name="description"
+      content="Convite de casamento de Franciely & Iarlo. Informações, localização, mensagem aos noivos e nossa história."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-brand">
+        <img src="LOGO.png" alt="Logo Franciele & Iarlo" />
+      </div>
+      <nav class="main-nav" id="mobile-menu">
+        <a href="#inicio">Início</a>
+        <a href="#como-chegar">Como chegar</a>
+        <a href="#mensagem">Deixe sua mensagem</a>
+        <a href="#sobre-nos">Sobre nós</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger"></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+    </div>
+    <header class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+
+        <div class="logo-placeholder">
+          <img src="LOGO.png" alt="Logo Franciele & Iarlo" class="logo-image" />
+        </div>
+        <p class="hero-subtitle">Estão convidados para celebrar o nosso amor</p>
+        <div class="hero-name-wrap">
+          <img src="NOME.png" alt="Franciely e Iarlo" class="hero-name-image" />
+        </div>
+        <p class="hero-date"> 17 de outubro • Igreja Matriz</p>
+
+      </div>
+    </header>
+
+    <main>
+      <!-- COMO CHEGAR -->
+      <section class="section" id="como-chegar">
+        <div class="section-inner">
+          <h2 class="section-title">Como chegar</h2>
+          <p class="section-text">
+            Aqui você encontra a localização do nosso casamento.
+            Use o mapa abaixo para traçar sua rota e chegar com tranquilidade.
+          </p>
+
+          <div class="location-wrapper">
+            <div class="location-info">
+              <h3>Endereço do Casamento</h3>
+              <p>
+                Igreja Matriz<br />
+                Rua Padre Apoliano, 1227-1303 - Centro<br />
+                Marco - CE
+              </p>
+
+              <!-- TROCAR ESTE LINK PELO LINK DO LOCAL NO GOOGLE MAPS -->
+              <a
+                class="btn"
+                href="https://maps.app.goo.gl/RzqPWghXcCx1qGeq8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir no Google Maps
+              </a>
+
+              <small class="hint">
+                Dica:Clique no botão acima para abrir o Google Maps e traçar a rota até o 
+                local do casamento.
+              </small>
+            </div>
+
+            <div class="map-container">
+              <!-- TROCAR O SRC PELO IFRAME DO GOOGLE MAPS DO LOCAL EXATO (opcional) -->
+              <iframe 
+              title=" Mapa do local do casamento"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.782720381665!2d-40.148849025905236!3d-3.123423340392079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ea6d58efd585f7%3A0xff9076b1959f0678!2sIgreja%20Matriz%20de%20S%C3%A3o%20Manuel!5e0!3m2!1spt-BR!2sbr!4v1784739394921!5m2!1spt-BR!2sbr" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEIXE SUA MENSAGEM -->
+      <section class="section alt" id="mensagem">
+        <div class="section-inner">
+          <h2 class="section-title">Deixe sua mensagem</h2>
+          <p class="section-text">
+            Sua presença é o nosso maior presente! Mas, se quiser deixar uma mensagem
+            carinhosa ou uma sugestão de presente, use a caixinha abaixo.
+          </p>
+
+          <form class="message-form" id="message-form">
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Como você quer aparecer na mensagem"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="tipo">Sobre o que é sua mensagem?</label>
+              <select id="tipo" name="tipo">
+                <option value="mensagem">Mensagem para os noivos</option>
+                <option value="sugestao-presente">Sugestão de presente</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Sua mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva sua mensagem aqui..."
+                required
+              ></textarea>
+            </div>
+          </form>
+
+          <div class="messages-list" id="messages-list">
+            <h3>Mensagens já deixadas</h3>
+            <ul id="messages-container"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE NÓS + PLAYLIST -->
+      <section class="section" id="sobre-nos">
+        <div class="section-inner about-grid">
+          <div class="about-text">
+            <h2 class="section-title">Sobre nós</h2>
+            <p class="section-text">
+              Tudo começou com um encontro simples, que acabou mudando para sempre
+              a nossa história. Entre conversas intermináveis, risadas espontâneas
+              e pequenos detalhes do dia a dia, fomos descobrindo que a vida faz
+              ainda mais sentido quando estamos juntos.
+            </p>
+            <p class="section-text">
+              De lá pra cá foram muitos sonhos divididos, viagens, planos e desafios
+              vencidos lado a lado. Hoje damos mais um passo importante: celebrar
+              o nosso amor com as pessoas que fizeram e fazem parte dessa caminhada.
+            </p>
+            <p class="section-text">
+              Este casamento é o início de um novo capítulo, cheio de fé, cumplicidade
+              e gratidão. Obrigado por fazer parte da nossa história.
+            </p>
+          </div>
+
+          <div class="playlist">
+            <h3>Nossa playlist no Spotify</h3>
+            <p class="section-text">
+              Separamos algumas músicas que fazem parte da nossa história. Dê o play
+              e entre no clima do nosso grande dia.
+            </p>
+
+            <!-- TROCAR O SRC PELO EMBED DA PLAYLIST DE VOCÊS NO SPOTIFY -->
+            <div class="spotify-embed">
+              <iframe 
+                data-testid="embed-iframe" 
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/7wdNsE7e21R4Ym4SLKOtNp?utm_source=generator&si=04ee9abe0468463c" 
+                width="100%" 
+                height="352" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>
+          Com carinho,
+          <img src="NOME.png" alt="Franciely & Iarlo" class="footer-name-image" />
+        </p>
+        <p class="footer-small">
+          <!---Em breve adicionaremos a logo oficial F &amp; I e mais detalhes do grande dia.-->
+          Nós aguardamos você para esse momento especial.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
