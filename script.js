@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       // Construir a mensagem formatada
-      const mensagemFormatada = `Seu nome: ${nome}\n\nSua mensagem: ${mensagem}`;
+      const mensagemFormatada = `Nome: ${nome}\n\nMensagem: ${mensagem}`;
       
       // Codificar para URL
       const mensagemEncodada = encodeURIComponent(mensagemFormatada);
