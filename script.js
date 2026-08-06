@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Formulário de mensagens via WhatsApp
-  const WHATSAPP_NUMBER = "5588997876860";
+  const WHATSAPP_NUMBER = "5588997137015";
   const form = document.getElementById("message-form");
   
   console.log("Form encontrado:", form);
