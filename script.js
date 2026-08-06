@@ -128,5 +128,38 @@ window.addEventListener("resize", () => {
   }
 });
 
+const targetDate = new Date("2026-10-17T19:00:00");
+const countdownElements = {
+  days: document.getElementById("countdown-days"),
+  hours: document.getElementById("countdown-hours"),
+  minutes: document.getElementById("countdown-minutes"),
+  seconds: document.getElementById("countdown-seconds"),
+};
+
+function atualizarContagemRegressiva() {
+  const agora = new Date();
+  const diferenca = targetDate - agora;
+
+  if (diferenca <= 0) {
+    Object.values(countdownElements).forEach((element) => {
+      if (element) element.textContent = "00";
+    });
+    return;
+  }
+
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+  if (countdownElements.days) countdownElements.days.textContent = String(dias).padStart(2, "0");
+  if (countdownElements.hours) countdownElements.hours.textContent = String(horas).padStart(2, "0");
+  if (countdownElements.minutes) countdownElements.minutes.textContent = String(minutos).padStart(2, "0");
+  if (countdownElements.seconds) countdownElements.seconds.textContent = String(segundos).padStart(2, "0");
+}
+
+atualizarContagemRegressiva();
+setInterval(atualizarContagemRegressiva, 1000);
+
 carregarMensagens();
 

@@ -49,6 +49,86 @@
     </header>
 
     <main>
+      <section class="welcome-section" aria-label="Mensagem inicial">
+        <div class="section-inner welcome-section-inner">
+          <div class="countdown-wrapper" aria-label="Contagem regressiva para o grande dia">
+            <p class="countdown-title">Contagem regressiva para o grande dia</p>
+            <div class="countdown">
+              <div class="countdown-card">
+                <span id="countdown-days">00</span>
+                <small>Dias</small>
+              </div>
+              <div class="countdown-card">
+                <span id="countdown-hours">00</span>
+                <small>Horas</small>
+              </div>
+              <div class="countdown-card">
+                <span id="countdown-minutes">00</span>
+                <small>Minutos</small>
+              </div>
+              <div class="countdown-card">
+                <span id="countdown-seconds">00</span>
+                <small>Segundos</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="welcome-block">
+            <p class="welcome-title">Sejam bem-vindos ao nosso site!</p>
+            <p class="welcome-subtitle">
+              A melhor forma de compartilhar esse momento com vocês é vivendo juntos esse sonho!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE NÓS + PLAYLIST -->
+      <section class="section" id="sobre-nos">
+        <div class="section-inner about-grid">
+          <div class="about-text">
+            <h2 class="section-title">Sobre nós</h2>
+            <p class="section-text">
+              Tudo começou com um encontro simples, que acabou mudando para sempre
+              a nossa história. Entre conversas intermináveis, risadas espontâneas
+              e pequenos detalhes do dia a dia, fomos descobrindo que a vida faz
+              ainda mais sentido quando estamos juntos.
+            </p>
+            <p class="section-text">
+              De lá pra cá foram muitos sonhos divididos, viagens, planos e desafios
+              vencidos lado a lado. Hoje damos mais um passo importante: celebrar
+              o nosso amor com as pessoas que fizeram e fazem parte dessa caminhada.
+            </p>
+            <p class="section-text">
+              Este casamento é o início de um novo capítulo, cheio de fé, cumplicidade
+              e gratidão. Obrigado por fazer parte da nossa história.
+            </p>
+          </div>
+
+          <div class="playlist">
+            <h3>Nossa playlist no Spotify</h3>
+            <p class="section-text">
+              Separamos algumas músicas que fazem parte da nossa história. Dê o play
+              e entre no clima do nosso grande dia.
+            </p>
+
+            <!-- TROCAR O SRC PELO EMBED DA PLAYLIST DE VOCÊS NO SPOTIFY -->
+            <div class="spotify-embed">
+              <iframe 
+                data-testid="embed-iframe" 
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/7wdNsE7e21R4Ym4SLKOtNp?utm_source=generator&si=04ee9abe0468463c" 
+                width="100%" 
+                height="352" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- COMO CHEGAR -->
       <section class="section" id="como-chegar">
         <div class="section-inner">
@@ -143,53 +223,6 @@
           <div class="messages-list" id="messages-list">
             <h3>Mensagens já deixadas</h3>
             <ul id="messages-container"></ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOBRE NÓS + PLAYLIST -->
-      <section class="section" id="sobre-nos">
-        <div class="section-inner about-grid">
-          <div class="about-text">
-            <h2 class="section-title">Sobre nós</h2>
-            <p class="section-text">
-              Tudo começou com um encontro simples, que acabou mudando para sempre
-              a nossa história. Entre conversas intermináveis, risadas espontâneas
-              e pequenos detalhes do dia a dia, fomos descobrindo que a vida faz
-              ainda mais sentido quando estamos juntos.
-            </p>
-            <p class="section-text">
-              De lá pra cá foram muitos sonhos divididos, viagens, planos e desafios
-              vencidos lado a lado. Hoje damos mais um passo importante: celebrar
-              o nosso amor com as pessoas que fizeram e fazem parte dessa caminhada.
-            </p>
-            <p class="section-text">
-              Este casamento é o início de um novo capítulo, cheio de fé, cumplicidade
-              e gratidão. Obrigado por fazer parte da nossa história.
-            </p>
-          </div>
-
-          <div class="playlist">
-            <h3>Nossa playlist no Spotify</h3>
-            <p class="section-text">
-              Separamos algumas músicas que fazem parte da nossa história. Dê o play
-              e entre no clima do nosso grande dia.
-            </p>
-
-            <!-- TROCAR O SRC PELO EMBED DA PLAYLIST DE VOCÊS NO SPOTIFY -->
-            <div class="spotify-embed">
-              <iframe 
-                data-testid="embed-iframe" 
-                style="border-radius:12px" 
-                src="https://open.spotify.com/embed/playlist/7wdNsE7e21R4Ym4SLKOtNp?utm_source=generator&si=04ee9abe0468463c" 
-                width="100%" 
-                height="352" 
-                frameBorder="0" 
-                allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-              </iframe>
-            </div>
           </div>
         </div>
       </section>

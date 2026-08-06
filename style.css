@@ -297,6 +297,114 @@ body {
   opacity: 0.9;
 }
 
+.welcome-section {
+  padding: 60px 24px;
+  background: linear-gradient(135deg, #fffaf7 0%, #f5eee8 100%);
+  border-top: 1px solid rgba(184, 95, 75, 0.08);
+}
+
+.welcome-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-wrapper {
+  margin: 0 auto 60px;
+  max-width: 700px;
+}
+
+.countdown-title {
+  margin: 0 0 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.countdown-card {
+  padding: 28px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  box-shadow: 0 12px 32px rgba(148, 69, 54, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(148, 69, 54, 0.24);
+}
+
+.countdown-card span {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.02em;
+}
+
+.countdown-card small {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.welcome-block {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.welcome-title {
+  margin: 0 0 20px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.welcome-subtitle {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.9;
+  color: var(--text-soft);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 48px 20px;
+  }
+  
+  .countdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  
+  .countdown-wrapper {
+    margin-bottom: 48px;
+  }
+  
+  .countdown-title {
+    margin-bottom: 20px;
+  }
+}
+
 /* Navegação */
 
 .main-nav {
