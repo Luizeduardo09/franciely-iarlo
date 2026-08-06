@@ -12,39 +12,40 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Formulário de mensagens (salva no localStorage do navegador)
-const form = document.getElementById("message-form");
+// Formulário de mensagens via WhatsApp
+const WHATSAPP_NUMBER = "5588997876860";
 
-function salvarMensagem(mensagem) {
-  const armazenadas = localStorage.getItem("fy_mensagens");
-  let lista = [];
-  if (armazenadas) {
-    try {
-      lista = JSON.parse(armazenadas);
-    } catch {
-      lista = [];
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("message-form");
+  
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById("nome").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      if (!nome || !mensagem) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+      }
+
+      // Construir a mensagem formatada
+      const mensagemFormatada = `*${nome}*\n\n${mensagem}`;
+      
+      // Codificar para URL
+      const mensagemEncodada = encodeURIComponent(mensagemFormatada);
+      
+      // Criar URL do WhatsApp
+      const urlWhatsApp = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensagemEncodada}`;
+      
+      // Redirecionar para WhatsApp
+      window.open(urlWhatsApp, "_blank");
+      
+      // Limpar o formulário
+      form.reset();
+    });
   }
-  lista.push(mensagem);
-  localStorage.setItem("fy_mensagens", JSON.stringify(lista));
-}
-
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const nome = document.getElementById("nome").value.trim();
-    const mensagem = document.getElementById("mensagem").value.trim();
-
-    if (!mensagem) return;
-
-    const novaMensagem = {
-      nome,
-      texto: mensagem,
-    };
-
-    salvarMensagem(novaMensagem);
-    form.reset();
-  });
 }
 
 const menuToggle = document.querySelector(".menu-toggle");

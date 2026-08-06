@@ -557,6 +557,19 @@ body {
   transform: translateY(-1px);
 }
 
+.btn-whatsapp {
+  width: 100%;
+  padding: 14px 24px;
+  background: #25d366;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5d;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.28);
+}
+
 /* FORMULÁRIO DE MENSAGEM */
 
 .message-form {
