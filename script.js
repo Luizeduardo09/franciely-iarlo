@@ -161,5 +161,32 @@ function atualizarContagemRegressiva() {
 atualizarContagemRegressiva();
 setInterval(atualizarContagemRegressiva, 1000);
 
+// Esconder/mostrar topbar ao rolar
+const topbar = document.querySelector(".topbar");
+let lastScrollTop = 0;
+let isTopbarVisible = true;
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Rolando para baixo - esconde topbar
+    if (isTopbarVisible) {
+      topbar.style.transform = "translateY(-100%)";
+      topbar.style.transition = "transform 0.3s ease-in-out";
+      isTopbarVisible = false;
+    }
+  } else {
+    // Rolando para cima - mostra topbar
+    if (!isTopbarVisible) {
+      topbar.style.transform = "translateY(0)";
+      topbar.style.transition = "transform 0.3s ease-in-out";
+      isTopbarVisible = true;
+    }
+  }
+  
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
+
 carregarMensagens();
 

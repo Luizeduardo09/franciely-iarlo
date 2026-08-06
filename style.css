@@ -10,7 +10,7 @@
   --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.06);
   --radius-lg: 18px;
   --radius-pill: 999px;
-  --topbar-height: 64px;
+  --topbar-height: 56px;
 }
 
 *,
@@ -88,9 +88,14 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 24px;
-  background: transparent;
+  background: rgba(111, 48, 38, 0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   z-index: 1200;
-  box-shadow: 0 6px 18px rgba(16, 8, 6, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 .topbar-brand {
@@ -103,7 +108,7 @@ body {
 
 .topbar-brand img {
   display: block;
-  height: 38px;
+  height: 32px;
   width: auto;
 }
 
@@ -111,21 +116,29 @@ body {
   position: absolute;
   right: 24px;
   display: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--white);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .menu-toggle:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.8);
-  outline-offset: 3px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
 }
 
 .sr-only {
@@ -172,9 +185,11 @@ body {
   justify-content: center;
   gap: 8px;
   padding: 6px;
-  background: rgba(111, 48, 38, 0.78);
+  background: rgba(111, 48, 38, 0.3);
   border-radius: 999px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-nav a {
@@ -215,12 +230,15 @@ body {
     right: 0;
     margin: 0;
     padding: 16px;
-    background: rgba(111, 48, 38, 0.98);
+    background: rgba(111, 48, 38, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 0 0 20px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-    box-shadow: 0 12px 24px rgba(16, 8, 6, 0.24);
+    box-shadow: 0 8px 16px rgba(16, 8, 6, 0.12);
   }
 
   .topbar .main-nav.open {
